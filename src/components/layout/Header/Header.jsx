@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
-import Logo from "../../common/Logo";
+import Logo from "../../common/logo";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
