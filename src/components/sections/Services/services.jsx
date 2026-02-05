@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   FaCode,
   FaCloud,
@@ -69,29 +70,26 @@ const Services = () => {
                     </p>
 
                     {/* Learn More */}
-                    <motion.div
-                      whileHover={{ x: 8 }}
-                      onClick={() =>
-                        document
-                          .getElementById("contact")
-                          ?.scrollIntoView({ behavior: "smooth" })
-                      }
-                      className="inline-flex items-center text-orange-500 font-semibold cursor-pointer"
-                    >
-                      Learn More
-                      <svg
-                        className="w-5 h-5 ml-2"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                    <motion.div whileHover={{ x: 8 }}>
+                      <Link
+                        to={`/services/${service.slug}`}
+                        className="inline-flex items-center text-orange-500 font-semibold"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17 8l4 4m0 0l-4 4m4-4H3"
-                        />
-                      </svg>
+                        Learn More
+                        <svg
+                          className="w-5 h-5 ml-2"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                          />
+                        </svg>
+                      </Link>
                     </motion.div>
 
                   </Card>
